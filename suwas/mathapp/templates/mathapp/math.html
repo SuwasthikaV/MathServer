@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Vehicle Mileage
+        </title>
+        <style>
+            body{
+                background-color: pink; 
+            }
+            .box{
+                margin-left:650px;
+                margin-top:350px;
+                background-color: blueviolet;
+                border: dashed 4px red;
+                width: 500px;
+                height:300px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+             <h1 align="center">Vehicle mileage</h1>
+             <h2 align="center">SUWASTHIKA V(25000885)</h2>
+            <form method="post" align="center">
+                {% csrf_token %}
+                <label>Distance Travelled(in km):</label>
+                <input type="text" name="distance" value="{{ distance }}">
+                <br><br>
+                <label>Amount Of Fuel(in lt):</label>
+                <input type="text" name="fuelconsumed" value="{{ fuelconsumed }}">
+                <br><br>
+                <input type="submit" value="Calculate">
+                <br><br>
+                <label>Vehicle's Mileage(km/lt):</label>
+                <input type="text" name="mileage" value="{{mileage}}">
+            </form>
+        </div>
+    </body>
+</html>
+
